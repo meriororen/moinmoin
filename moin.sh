@@ -87,6 +87,7 @@ else
     exec uwsgi --uid uwsgi \
                 -s /tmp/uwsgi.sock \
                 --uwsgi-socket 0.0.0.0:3031 \
+                -b 32768 \
                 --plugins python \
                 --pidfile /tmp/uwsgi-moinmoin.pid \
                 --chdir /usr/local/share/moin \
